@@ -36,5 +36,5 @@ from core.models import Employee
 #obj = Type.objects.filter(name__endswith='a').exclude(id=5)
 #obj = Employee.objects.filter(type_id=1)
 #print(obj)
-#for i in Type.objects.filter(name__endswith='a'):
-#    print(i.name)
+for i in Type.objects.filter(name__endswith='a'):
+    print(i.name)
