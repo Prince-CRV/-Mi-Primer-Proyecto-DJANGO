@@ -5,8 +5,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app_1.settings')
 django.setup()
 
-from core.models import Type
-from core.models import Employee
+from core.models import *
 
 # Type.objects.create(name='preuba')
 #Type.objects.create(name='pr2')
@@ -16,8 +15,8 @@ from core.models import Employee
 #print(query)
 
 #insertar
-#t = Type()
-#t.name = 'Accionistakllklklk'
+#t = Category()
+#t.name = 'Bebidas'
 #t.save()
 
 #editar
@@ -36,5 +35,7 @@ from core.models import Employee
 #obj = Type.objects.filter(name__endswith='a').exclude(id=5)
 #obj = Employee.objects.filter(type_id=1)
 #print(obj)
-for i in Type.objects.filter(name__endswith='a'):
-    print(i.name)
+#for i in Type.objects.filter(name__endswith='a'):
+#    print(i.name)
+#for i in Category.objects.filter():
+#    print(i)
