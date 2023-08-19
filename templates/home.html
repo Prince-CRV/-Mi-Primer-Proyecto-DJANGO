@@ -10,14 +10,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{% static 'lib/AdminLTE-3.2.0/plugins/fontawesome-free-6.4.2-web/css/all.min.css' %}">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'lib/AdminLTE-3.2.0/plugins/fontawesome-free-6.4.2-web/css/all.min.css' %}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{% static 'lib/AdminLTE-3.2.0/css/adminlte.min.css' %}">
     <!-- jQuery -->
@@ -28,14 +29,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{% static 'lib/AdminLTE-3.2.0/dist/js/adminlte.min.js' %}"></script>
     <!-- sweetalert -->
     <script src="{% static 'lib/sweetalert2-11.7.23/package/dist/sweetalert2.all.min.js' %}"></script>
+    <!-- Functions -->
+    <script src="{% static 'js/functions.js' %}"></script>
     <!-- Block head -->
     {% block head %}
-    	
+
     {% endblock %}
 </head>
 
 {% block body %}
 
-{% endblock  %}
+{% endblock %}
 
 </html>

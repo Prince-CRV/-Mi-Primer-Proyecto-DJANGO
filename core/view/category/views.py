@@ -3,7 +3,7 @@ from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.utils.decorators import method_decorator
 
 from core.forms import CategoryForm
@@ -54,9 +54,21 @@ class CategoryCreateView(CreateView):
     template_name = 'category/category_form.html'
     success_url = reverse_lazy('core:category_list')
 
-    # def post(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'add':
+                form = self.get_form()
+                data = form.save()
+            else:
+                data['error'] = 'No ha ingresado a ninguna opción'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data)
+
     #     print(request.POST)
-    #     form = CategoryForm(request.POST)
+    #     form = CategoryForm(request.POST) #self.get_form() es mejor
     #     if form.is_valid():
     #         form.save()
     #         return HttpResponseRedirect(self.success_url)
@@ -68,6 +80,22 @@ class CategoryCreateView(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Creación de una Categoría'
-        context['entity'] = 'Categorías'
         context['list_url'] = reverse_lazy('core:category_list')
+        context['entity'] = 'Categorías'
+        context['action'] = 'add'
+        return context
+
+
+class CategoryUpdateView(UpdateView):
+    model = Category
+    form_class = CategoryForm
+    template_name = 'category/category_form.html'
+    success_url = reverse_lazy('core:category_list')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edición de una Categoría'
+        context['list_url'] = reverse_lazy('core:category_list')
+        context['entity'] = 'Categorías'
+        context['action'] = 'edit'
         return context

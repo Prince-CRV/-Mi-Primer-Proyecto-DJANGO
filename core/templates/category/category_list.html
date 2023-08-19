@@ -14,8 +14,10 @@
             <td>{{ item.id }}</td>
             <td>{{ item.name }}</td>
             <td>
-                <button class="btn btn-outline-warning btn-flat btnedit"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></button>
-                <button class="btn btn-outline-danger btn-flat btntrash"><i class="fa-solid fa-trash" style="color: #000000;"></i></button>
+                <a href="{% url 'core:category_update' c.id %}" class="btn btn-outline-warning btn-flat">
+                    <i class="fa-solid fa-pen-to-square" style="color: #000000;"></i>
+                </a>
+                <button class="btn btn-outline-danger btn-flat "><i class="fa-solid fa-trash" style="color: #000000;"></i></button>
             </td>
         </tr>
     {% endfor %}
