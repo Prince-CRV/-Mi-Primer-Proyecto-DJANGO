@@ -5,11 +5,7 @@
         <div class="card card-default">
             <div class="card-header">
                 <h3 class="card-title">
-                    {% if action == 'add' %}
-                        <i class="fa-solid fa-plus fa-beat"></i>
-                    {% else %}
-                        <i class="fa-solid fa-edit fa-beat"></i>
-                    {% endif %}
+                    <i class="fa-solid fa-trash fa-beat"></i>
                     {{ title }}
                 </h3>
             </div>
@@ -31,40 +27,25 @@
 
                     </div>
                 {% endif %}
-
-
-                {% for field in form.visible_fields %}
-                    <div class="form-group">
-                        <label for="email">{{ field.label }}:</label>
-                        {{ field|add_class:"form-control"|attr:"autocomplete:off" }}
-                    </div>
-                {% endfor %}
-
+                <div class="alert alert-danger alert-dismissible">
+                     <h5><i class="icon fas fa-ban"></i> Notificación!</h5>
+                     ¿Estás seguro de eliminar el registro # {{ object.id }}?
+                </div>
 
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-outline-primary btn-flat btnTest">
-                    <i class="fas fa-save"></i> Guardar registro
+                <button type="submit" class="btn btn-outline-primary btn-flat">
+                    <i class="fas fa-save"></i> Si, aceptar
                 </button>
+                <a href="{{ list_url }}" class="btn btn-outline-info btn-flat">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
             </div>
 
         </div>
     </form>
-    <script>
-        {% if form.errors %}
-            var errors = '';
-            {% for field in form %}
-                {% for error in field.errors %}
-                    errors += '{{ error }}\n';
-                {% endfor %}
-            {% endfor %}
-            Swal.fire({
-                title: 'Error!',
-                text: errors,
-                icon: 'error',
-            });
-        {% endif %}
 
+    <script>
         $('form').on('submit', function (e) {
             e.preventDefault();
             var parameters = $(this).serializeArray();
