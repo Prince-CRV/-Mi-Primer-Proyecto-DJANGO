@@ -1,8 +1,6 @@
-from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse, HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.http import JsonResponse
 from django.urls import reverse_lazy
-from django.views.decorators.csrf import csrf_protect, csrf_exempt
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
@@ -10,13 +8,13 @@ from core.forms import CategoryForm
 from core.models import Category
 
 
-def category_list(request):
-    data = {
-        'title': 'Listado de Categorías',
-        'categories': Category.objects.all()
-    }
-
-    return render(request, 'category/category_list.html', data)
+# def category_list(request):
+#     data = {
+#         'title': 'Listado de Categorías',
+#         'categories': Category.objects.all()
+#     }
+#
+#     return render(request, 'category/category_list.html', data)
 
 
 class CategoryListView(ListView):
@@ -43,7 +41,7 @@ class CategoryListView(ListView):
         except Exception as e:
             data['error'] = str(e)
 
-        return JsonResponse(data, safe=False) # se usa safe=False porque estoy manejando arrays[]
+        return JsonResponse(data, safe=False)  # se usa safe=False porque estoy manejando arrays[]
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

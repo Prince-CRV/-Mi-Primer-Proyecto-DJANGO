@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'app_1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = db.POSTGRESQL
+DATABASES = db.SQLITE
 
 
 # Password validation

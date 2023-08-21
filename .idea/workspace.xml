@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fb2ac2-7a13-4b65-be12-d7d6d68a025d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/core/static/category/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/templates/category/category_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/category/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/category/category_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_1/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/view/category/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/view/category/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hzt/body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hzt/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +107,7 @@
       <workItem from="1692449859094" duration="13010000" />
       <workItem from="1692525836112" duration="29000" />
       <workItem from="1692525877701" duration="600000" />
-      <workItem from="1692613327520" duration="5989000" />
+      <workItem from="1692613327520" duration="7301000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -134,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692465077477</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <option name="closed" value="true" />
+      <created>1692631019088</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692631019088</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
