@@ -40,3 +40,9 @@ class CategoryForm(ModelForm):
         except Exception as e:
             data['error'] = str(e)
         return data
+
+    def clean(self):
+        cleaned = super().clean()
+        if len(cleaned['name']) <= 50:
+            raise forms.ValidationError('El nombre de la categoría debe tener mas de 50')
+        return cleaned
