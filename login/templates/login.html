@@ -20,12 +20,13 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+        <a href="{% url 'index' %}"><b>Pr</b>ince</a>
     </div>
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Inicio de sesión</p>
             <form method="post">
+                <input type="hidden" name="next" value="{{ next }}">
                 {% csrf_token %}
                 <div class="input-group mb-3">
                     {{ form.username|add_class:'form-control'|attr:'autocomplete:off'|attr:'placeholder:Ingrese su username' }}
