@@ -3,6 +3,7 @@ from django.urls import path
 from core.view.category.views import *
 from core.view.dashboard.views import *
 from core.view.product.views import *
+from core.view.tests.views import TestView
 
 #from core.views import myfirstview
 
@@ -23,4 +24,6 @@ urlpatterns = [
     path('product/delete/<int:pk>/', ProductDeleteView.as_view(), name='product_delete'),
     # home
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
+    # tests
+    path('test/', TestView.as_view(), name='test'),
 ]
