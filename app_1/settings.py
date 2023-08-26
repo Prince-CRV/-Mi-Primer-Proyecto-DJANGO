@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+from django.template.context_processors import media
 
 import app_1.db as db
 import os
@@ -124,6 +125,8 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = '/core/dashboard/'
 LOGOUT_REDIRECT_URL = '/login/'
 LOGIN_URL = '/login/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

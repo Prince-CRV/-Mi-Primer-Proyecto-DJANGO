@@ -19,9 +19,14 @@ from django.urls import path, include
 from homepage.views import IndexView
 from login.views import *
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('core/', include('core.urls')),
     path('', IndexView.as_view(), name='index'),
     path('login/', include('login.urls')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

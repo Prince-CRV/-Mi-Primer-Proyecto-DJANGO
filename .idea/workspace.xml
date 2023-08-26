@@ -5,25 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fb2ac2-7a13-4b65-be12-d7d6d68a025d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/core/view/dashboard/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/migrations/0007_remove_product_cate_product_cat_alter_product_image_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/product/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/product/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/templates/product/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/view/product/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product/2023/08/25/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product/2023/08/25/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product/2023/08/26/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product/2023/08/26/user_vxmy68x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-confirm-v3.3.4/jquery-confirm.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-confirm-v3.3.4/jquery-confirm.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_1/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_1/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/view/category/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/view/category/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hzt/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hzt/body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/hzt/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hzt/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vtc/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vtc/body.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vtc/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vtc/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vtc/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vtc/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,27 +68,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/venv",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/venv&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\freef\Desktop\Webs\Estudio\proyecto_1\templates\hzt" />
@@ -130,7 +138,10 @@
       <workItem from="1692720370362" duration="316000" />
       <workItem from="1692720695343" duration="390000" />
       <workItem from="1692721185017" duration="1235000" />
-      <workItem from="1692784843255" duration="24694000" />
+      <workItem from="1692784843255" duration="24990000" />
+      <workItem from="1692958656895" duration="22000" />
+      <workItem from="1692958684823" duration="12581000" />
+      <workItem from="1693055359256" duration="3700000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -236,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692805973135</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update">
+      <option name="closed" value="true" />
+      <created>1692817751318</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1692817751318</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

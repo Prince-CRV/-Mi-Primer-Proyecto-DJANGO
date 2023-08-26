@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 {% load widget_tweaks %}
 {% block content %}
-    <form method="post" action=".">
+    <form method="post" action="." enctype="multipart/form-data">
         <div class="card card-default">
             <div class="card-header">
                 <h3 class="card-title">
@@ -46,6 +46,9 @@
                 <button type="submit" class="btn btn-outline-primary btn-flat btnTest">
                     <i class="fas fa-save"></i> Guardar registro
                 </button>
+                <a href="{{ list_url }}" class="btn btn-outline-danger btn-flat">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
             </div>
 
         </div>
@@ -62,8 +65,8 @@
             {% for error in form.non_field_errors %}
                 errors += '{{ error }}\n';
             {% endfor %}
-            
-            
+
+
 
             Swal.fire({
                 title: 'Error!',
@@ -72,27 +75,18 @@
             });
         {% endif %}
 
-       /* $('form').on('submit', function (e) {
+        $('form').on('submit', function (e) {
             e.preventDefault();
-            var parameters = $(this).serializeArray();
-            $.ajax({
-                url: window.location.pathname,
-                type: 'POST',
-                data: parameters,
-                dataType: 'json',
-            }).done(function (data) {
-                console.log(data);
-                if (!data.hasOwnProperty('error')) {
-                    location.href = '{{ list_url }}';
-                    return false;
-                }
-                message_error(data.error);
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                alert(textStatus + ': ' + errorThrown);
-            }).always(function (data) {
+            //var parameters = $(this).serializeArray();
+            var parameters = new FormData(this);
 
+            /*parameters.forEach(function (value,key) {
+                console.log(key+':'+value);
+            });*/
+
+            submit_with_ajax(window.location.pathname,'Notificación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
+                location.href = '{{ list_url }}';
             });
-        });*/
-
+        });
     </script>
 {% endblock %}
