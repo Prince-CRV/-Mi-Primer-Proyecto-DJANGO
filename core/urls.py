@@ -1,11 +1,12 @@
 from django.urls import path
 
 from core.view.category.views import *
+from core.view.client.views import ClientView
 from core.view.dashboard.views import *
 from core.view.product.views import *
 from core.view.tests.views import TestView
 
-#from core.views import myfirstview
+# from core.views import myfirstview
 
 
 app_name = 'core'
@@ -22,6 +23,8 @@ urlpatterns = [
     path('product/add/', ProductCreateView.as_view(), name='product_create'),
     path('product/update/<int:pk>/', ProductUpdateView.as_view(), name='product_update'),
     path('product/delete/<int:pk>/', ProductDeleteView.as_view(), name='product_delete'),
+    # client
+    path('client/', ClientView.as_view(), name='client'),
     # home
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
     # tests
