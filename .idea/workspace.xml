@@ -5,12 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fb2ac2-7a13-4b65-be12-d7d6d68a025d" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/AUTHORS.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_444444_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_555555_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_777620_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_777777_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_cc0000_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_ffffff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/static/client/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/static/client/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/templates/client/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/client/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/view/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/view/client/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/view/tests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/view/tests/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tests.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +77,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "js.last.introduce.type": "VAR",
     "last_opened_file_path": "C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/venv",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -64,7 +85,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -123,7 +144,8 @@
       <workItem from="1693055359256" duration="11847000" />
       <workItem from="1693308043453" duration="19000" />
       <workItem from="1693308068111" duration="17059000" />
-      <workItem from="1693329203118" duration="7068000" />
+      <workItem from="1693329203118" duration="7401000" />
+      <workItem from="1693390653483" duration="4486000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -285,7 +307,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693330308522</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update">
+      <option name="closed" value="true" />
+      <created>1693338227033</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1693338227033</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update">
+      <option name="closed" value="true" />
+      <created>1693338431815</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1693338431815</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

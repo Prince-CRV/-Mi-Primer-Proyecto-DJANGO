@@ -52,7 +52,7 @@ $(function () {
         $('input[name="action"]').val('add');
         modal_title.find('span').html('Creación de un cliente');
         console.log(modal_title.find('i'));
-        modal_title.find('i').removeClass().addClass('fa-solid fa-plus fa-beat');
+        modal_title.find('i').removeClass().addClass('fas fa-plus');
         $('form')[0].reset();
         $('#myModalClient').modal('show');
     });
@@ -60,7 +60,7 @@ $(function () {
     $('#data tbody')
         .on('click', 'a[rel="edit"]', function () {
             modal_title.find('span').html('Edición de un cliente');
-            modal_title.find('i').removeClass().addClass('fa-solid fa-edit fa-beat');
+            modal_title.find('i').removeClass().addClass('fas fa-edit');
             var tr = tblClient.cell($(this).closest('td, li')).index();
             var data = tblClient.row(tr.row).data();
             $('input[name="action"]').val('edit');
@@ -83,7 +83,6 @@ $(function () {
                 tblClient.ajax.reload();
             });
         });
-
 
     $('#myModalClient').on('shown.bs.modal', function () {
         //$('form')[0].reset();
