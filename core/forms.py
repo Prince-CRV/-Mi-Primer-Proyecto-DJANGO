@@ -95,9 +95,14 @@ class TestForm(Form):
         'style': 'width: 100%'
     }))
 
-    search = CharField(widget=TextInput(attrs={
-        'class': 'form-control',
-        'placeholder': 'Ingrese una descripción',
+    # search = CharField(widget=TextInput(attrs={
+    #     'class': 'form-control',
+    #     'placeholder': 'Ingrese una descripción',
+    # }))
+
+    search = ModelChoiceField(queryset=Product.objects.none(), widget=Select(attrs={
+        'class': 'form-control select2',
+        'style': 'width: 100%'
     }))
 
 

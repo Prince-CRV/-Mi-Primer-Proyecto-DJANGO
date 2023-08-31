@@ -5,31 +5,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fb2ac2-7a13-4b65-be12-d7d6d68a025d" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/AUTHORS.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/external/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_444444_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_555555_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_777620_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_777777_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_cc0000_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/images/ui-icons_ffffff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.structure.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.structure.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/jquery-ui.theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/jquery-ui-1.13.2/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/templates/client/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/templates/client/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/view/tests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/view/tests/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/css/select2-bootstrap4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/css/select2-bootstrap4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/css/select2-bootstrap4.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/css/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/css/select2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/css/select2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/css/select2.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/bn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/bs.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/bs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/dsb.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/dsb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/gl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hsb.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hsb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hy.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/hy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/is.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/is.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ka.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ka.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/km.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/lb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/mk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ms.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ne.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ne.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/pa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ps.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sr-Cyrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sr-Cyrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/te.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/tk.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/tk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/ug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/zh-TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/i18n/zh-TW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/select2.full.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/select2.full.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/select2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/select2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2-develop/dist/js/select2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tests.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,28 +118,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "js.last.introduce.type": "VAR",
-    "last_opened_file_path": "C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/venv",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;VAR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/venv&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\freef\Desktop\Webs\Estudio\proyecto_1\templates\hzt" />
@@ -145,7 +196,8 @@
       <workItem from="1693308043453" duration="19000" />
       <workItem from="1693308068111" duration="17059000" />
       <workItem from="1693329203118" duration="7401000" />
-      <workItem from="1693390653483" duration="4486000" />
+      <workItem from="1693390653483" duration="4628000" />
+      <workItem from="1693481534095" duration="6241000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -323,7 +375,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693338431815</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update">
+      <option name="closed" value="true" />
+      <created>1693395219862</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1693395219862</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update">
+      <option name="closed" value="true" />
+      <created>1693395249973</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1693395249973</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

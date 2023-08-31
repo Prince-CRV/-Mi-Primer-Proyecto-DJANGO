@@ -24,17 +24,16 @@ class TestView(TemplateView):
                 data = [{'id': '', 'text': '-----------'}]
                 for i in Product.objects.filter(cat_id=request.POST['id']):
                     data.append({'id': i.id, 'text': i.name, 'data': i.cat.toJSON()})
-            elif action =='autocomplete':
+            elif action == 'autocomplete':
                 data = []
                 for i in Category.objects.filter(name__icontains=request.POST['term'])[0:10]:
                     item = i.toJSON()
-                    item['value'] = i.name
+                    item['text'] = i.name
                     data.append(item)
             else:
                 data['error'] = 'Ha ocurrido un error'
         except Exception as e:
             data['error'] = str(e)
-
         return JsonResponse(data, safe=False)  # se usa safe=False porque estoy manejando arrays[]
 
     def get_context_data(self, **kwargs):
