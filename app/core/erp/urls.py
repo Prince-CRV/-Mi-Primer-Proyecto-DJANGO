@@ -3,6 +3,7 @@ from core.erp.views.category.views import *
 from core.erp.views.client.views import *
 from core.erp.views.dashboard.views import *
 from core.erp.views.product.views import *
+from core.erp.views.sale.views import SaleCreateView
 from core.erp.views.tests.views import TestView
 
 app_name = 'erp'
@@ -27,4 +28,9 @@ urlpatterns = [
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
     # test
     path('test/', TestView.as_view(), name='test'),
+    # sale
+    # path('sale/list/', SaleListView.as_view(), name='sale_list'),
+    path('sale/add/', SaleCreateView.as_view(), name='sale_create'),
+    # path('sale/update/<int:pk>/', SaleUpdateView.as_view(), name='sale_update'),
+    # path('sale/delete/<int:pk>/', SaleDeleteView.as_view(), name='sale_delete'),
 ]
