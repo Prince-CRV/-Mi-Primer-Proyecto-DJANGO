@@ -1,3 +1,4 @@
+var tblProducts;
 var vents = {
     items: {
         cli: '',
@@ -26,7 +27,7 @@ var vents = {
     },
     list: function () {
         this.calculate_invoice();
-        $('#tblProducts').DataTable({
+        tblProducts = $('#tblProducts').DataTable({
             responsive: true,
             autoWidth: false,
             destroy: true,
@@ -62,7 +63,7 @@ var vents = {
                     class: 'text-center',
                     orderable: false,
                     render: function (data, type, row) {
-                        return '<input type="text" name="cant" class="form-control form-control-sm" autocomplete="off" value="' + row.cant + '">';
+                        return '<input type="text" name="cant" class="form-control form-control-sm input-sm" autocomplete="off" value="' + row.cant + '">';
                     }
                 },
                 {
@@ -74,6 +75,14 @@ var vents = {
                     }
                 },
             ],
+            rowCallback(row, data, displayNum, displayIndex, dataIndex) {
+
+                $(row).find('input[name = "cant"]').TouchSpin({
+                    min: 1,
+                    max: 1000000000,
+                    step: 1,
+                });
+            },
             initComplete: function (settings, json) {
 
             }
@@ -88,8 +97,8 @@ $(function () {
     });
 
     $('#date_joined').datetimepicker({
-        format: 'YYYY/MM/DD',
-        date: moment().format('YYYY/MM/DD'),
+        format: 'YYYY-MM-DD',
+        date: moment().format('YYYY-MM-DD'),
         locale: 'es',
         //maxDate: moment().format('YYYY/MM/DD'),
         //minDate: moment().format('YYYY/MM/DD'),
@@ -140,4 +149,55 @@ $(function () {
             $(this).val('');
         }
     });
+
+    $('.btnRemoveAll').on('click', function () {
+        if (vents.items.products.length === 0) return false;
+        alert_action('Notificación', '¿Estás seguro de eliminar todos los items de tu detalle?', function () {
+            vents.items.products = [];
+            vents.list();
+        });
+    });
+
+    //event cantidad
+    $('#tblProducts tbody')
+        .on('click', 'a[rel="remove"]', function () {
+            var tr = tblProducts.cell($(this).closest('td,li')).index();
+            alert_action('Notificación', '¿Estás seguro de eliminar este producto de tu detalle?', function () {
+                vents.items.products.splice(tr.row, 1); //splice es un método para eliminar en Javascript
+                vents.list();
+            });
+        })
+        .on('change', 'input[name = "cant"]', function () {
+            console.clear();
+            var cant = parseInt($(this).val());
+            var tr = tblProducts.cell($(this).closest('td,li')).index(); //hayar posición
+            //var data = tblProducts.row(tr.row).node(); //hayar tr completo..... con .data() traigo el objeto
+            vents.items.products[tr.row].cant = cant;
+            vents.calculate_invoice();
+            $('td:eq(5)', tblProducts.row(tr.row).node()).html('$' + vents.items.products[tr.row].subtotal.toFixed(2));
+        });
+
+    $('.btnClearSearch').on('click', function () {
+        $('input[name="search"]').val('').focus();
+    });
+    //event submit
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+
+        if (vents.items.products.length === 0) {
+            message_error('Debe agregar al menos un producto!');
+            return false;
+        }
+
+        vents.items.date_joined = $('input[name="date_joined"]').val();
+        vents.items.cli = $('select[name="cli"]').val();
+        var parameters = new FormData();
+        parameters.append('action', $('input[name="action"]').val());
+        parameters.append('vents', JSON.stringify(vents.items));
+        submit_with_ajax(window.location.pathname, 'Notificación', '¿Estas seguro de realizar la siguiente acción?', parameters, function () {
+            location.href = '/erp/dashboard/';
+        });
+    });
+
+    vents.list();
 });

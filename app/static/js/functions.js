@@ -24,13 +24,13 @@ function submit_with_ajax(url, title, content, parameters, callback) {
         content: content,
         columnClass: 'small',
         typeAnimated: true,
-        cancelButtonClass: 'btn-primary',
+        cancelButtonClass: 'btn-outline-primary',
         draggable: true,
         dragWindowBorder: false,
         buttons: {
             info: {
                 text: "Si",
-                btnClass: 'btn-primary',
+                btnClass: 'btn-outline-primary btn-flat',
                 action: function () {
                     $.ajax({
                         url: url, //window.location.pathname
@@ -55,7 +55,37 @@ function submit_with_ajax(url, title, content, parameters, callback) {
             },
             danger: {
                 text: "No",
-                btnClass: 'btn-red',
+                btnClass: 'btn-outline-danger btn-flat',
+                action: function () {
+
+                }
+            },
+        }
+    })
+}
+
+function alert_action(title, content, callback) {
+    $.confirm({
+        theme: 'material',
+        title: title,
+        icon: 'fa fa-info',
+        content: content,
+        columnClass: 'small',
+        typeAnimated: true,
+        cancelButtonClass: 'btn-outline-primary',
+        draggable: true,
+        dragWindowBorder: false,
+        buttons: {
+            info: {
+                text: "Si",
+                btnClass: 'btn-outline-primary btn-flat',
+                action: function () {
+                    callback();
+                }
+            },
+            danger: {
+                text: "No",
+                btnClass: 'btn-outline-danger btn-flat',
                 action: function () {
 
                 }
