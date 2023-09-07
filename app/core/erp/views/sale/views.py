@@ -1,16 +1,20 @@
 import json
+import os
 
+from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import transaction
-from django.http import JsonResponse
+from django.http import HttpResponse
+from django.http import JsonResponse, HttpResponseRedirect
+from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import CreateView, ListView, DeleteView, UpdateView, View
+from xhtml2pdf import pisa
 
 from core.erp.forms import SaleForm
 from core.erp.mixins import ValidatePermissionRequiredMixin
-from django.views.generic import CreateView, ListView, DeleteView, UpdateView
-
 from core.erp.models import Sale, Product, DetSale
 
 
@@ -54,7 +58,7 @@ class SaleCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Create
     model = Sale
     form_class = SaleForm
     template_name = 'sale/create.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('erp:sale_list')
     permission_required = 'erp.add_sale'
     url_redirect = success_url
 
@@ -71,11 +75,11 @@ class SaleCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Create
                 prods = Product.objects.filter(name__icontains=request.POST['term'])[0:10]
                 for i in prods:
                     item = i.toJSON()
-                    #item['value'] = i.name
+                    # item['value'] = i.name
                     item['text'] = i.name
                     data.append(item)
             elif action == 'add':
-                with transaction.atomic():  # es para si llega a pasar un error se reversa y no se guarda nada en la db
+                with transaction.atomic():
                     vents = json.loads(request.POST['vents'])
                     sale = Sale()
                     sale.date_joined = vents['date_joined']
@@ -112,7 +116,7 @@ class SaleUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Update
     model = Sale
     form_class = SaleForm
     template_name = 'sale/create.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('erp:sale_list')
     permission_required = 'erp.change_sale'
     url_redirect = success_url
 
@@ -132,7 +136,7 @@ class SaleUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Update
                     item['value'] = i.name
                     data.append(item)
             elif action == 'edit':
-                with transaction.atomic():  # es para si llega a pasar un error se reversa y no se guarda nada en la db
+                with transaction.atomic():
                     vents = json.loads(request.POST['vents'])
                     # sale = Sale.objects.get(pk=self.get_object().id)
                     sale = self.get_object()
@@ -203,3 +207,46 @@ class SaleDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Delete
         context['entity'] = 'Ventas'
         context['list_url'] = self.success_url
         return context
+
+
+class SaleInvoicePdfView(View):
+
+    def link_callback(self, uri, rel):
+        """
+        Convert HTML URIs to absolute system paths so xhtml2pdf can access those
+        resources
+        """
+        # use short variable names
+        sUrl = settings.STATIC_URL  # Typically /static/
+        sRoot = settings.STATIC_ROOT  # Typically /home/userX/project_static/
+        mUrl = settings.MEDIA_URL  # Typically /static/media/
+        mRoot = settings.MEDIA_ROOT  # Typically /home/userX/project_static/media/
+
+        # convert URIs to absolute system paths
+        if uri.startswith(mUrl):
+            path = os.path.join(mRoot, uri.replace(mUrl, ""))
+        elif uri.startswith(sUrl):
+            path = os.path.join(sRoot, uri.replace(sUrl, ""))
+        else:
+            return uri  # handle absolute uri (ie: http://some.tld/foo.png)
+
+        # make sure that file exists
+        if not os.path.isfile(path):
+            raise Exception(
+                'media URI must start with %s or %s' % (sUrl, mUrl)
+            )
+        return path
+
+    def get(self, request, *args, **kwargs):
+
+        template = get_template('sale/invoice.html')
+        context = {
+            'sale': Sale.objects.get(pk=self.kwargs['pk']),
+            'comp': {'name': 'PRINCESOFT S.A', 'ruc': '9999999999999', 'address': 'Las Galletas'},
+            'icon': '{}{}'.format(settings.MEDIA_URL, 'logo.png')
+        }
+        html = template.render(context)
+        response = HttpResponse(content_type='application/pdf')
+        # response['Content-Disposition'] = 'attachment; filename="report.pdf"'
+        pisa.CreatePDF(html, dest=response, link_callback=self.link_callback)
+        return response
