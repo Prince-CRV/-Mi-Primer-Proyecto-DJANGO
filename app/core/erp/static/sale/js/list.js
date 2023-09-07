@@ -1,7 +1,6 @@
 var tblSale;
 
 function format(d) {
-    console.log(d);
     var html = '<table class="table">';
     html += '<thead class="thead-dark">';
     html += '<tr><th scope="col">Producto</th>';
@@ -68,8 +67,8 @@ $(function () {
                 orderable: false,
                 render: function (data, type, row) {
                     var buttons = '<a href="/erp/sale/delete/' + row.id + '/" class="btn btn-outline-danger btn-xs btn-flat"><i class="fa-solid fa-trash" style="color: #000000;"></i></a> ';
+                    buttons += '<a href="/erp/sale/update/' + row.id + '/" class="btn btn-outline-warning btn-xs btn-flat"><i class="fas fa-edit" style="color: #000000;"></i></a> ';
                     buttons += '<a rel="details" class="btn btn-outline-success btn-xs btn-flat"><i class="fa-solid fa-search"></i></a> ';
-                    //var buttons = '<a href="/erp/sale/update/' + row.id + '/" class="btn btn-warning btn-xs btn-flat"><i class="fas fa-edit"></i></a> ';
                     return buttons;
                 }
             },
@@ -84,7 +83,7 @@ $(function () {
             var data = tblSale.row(tr.row).data();
 
             $('#tblDet').DataTable({
-                responsive: true,
+                //responsive: true,
                 scrollX: true,
                 autoWidth: false,
                 destroy: true,

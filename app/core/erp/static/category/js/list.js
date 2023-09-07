@@ -1,6 +1,7 @@
 $(function () {
     $('#data').DataTable({
-        responsive: true,
+        //responsive: true,
+        scrollX: true,
         autoWidth: false,
         destroy: true,
         deferRender: true,
