@@ -4,19 +4,22 @@ var vents = {
         cli: '',
         date_joined: '',
         subtotal: 0.00,
+        iva: 0.00,
         total: 0.00,
-        products: [],
+        products: []
     },
     calculate_invoice: function () {
         var subtotal = 0.00;
         var iva = $('input[name="iva"]').val();
         $.each(this.items.products, function (pos, dict) {
+            dict.pos = pos;
             dict.subtotal = dict.cant * parseFloat(dict.pvp);
             subtotal += dict.subtotal;
         });
         this.items.subtotal = subtotal;
         this.items.iva = this.items.subtotal * iva;
         this.items.total = this.items.subtotal + this.items.iva;
+
         $('input[name="subtotal"]').val(this.items.subtotal.toFixed(2));
         $('input[name="ivacalc"]').val(this.items.iva.toFixed(2));
         $('input[name="total"]').val(this.items.total.toFixed(2));
@@ -31,7 +34,6 @@ var vents = {
             responsive: true,
             autoWidth: false,
             destroy: true,
-            deferRender: true,
             data: this.items.products,
             columns: [
                 {"data": "id"},
@@ -82,6 +84,7 @@ var vents = {
                     max: 1000000000,
                     step: 1,
                 });
+
             },
             initComplete: function (settings, json) {
 
@@ -91,6 +94,7 @@ var vents = {
 };
 
 $(function () {
+
     $('.select2').select2({
         theme: "bootstrap4",
         language: 'es'
@@ -98,7 +102,7 @@ $(function () {
 
     $('#date_joined').datetimepicker({
         format: 'YYYY-MM-DD',
-        date: moment().format('YYYY-MM-DD'),
+        date: moment().format("YYYY-MM-DD"),
         locale: 'es',
         //maxDate: moment().format('YYYY/MM/DD'),
         //minDate: moment().format('YYYY/MM/DD'),
@@ -117,7 +121,7 @@ $(function () {
     })
         .val(0.12);
 
-    //search products
+    // search products
 
     $('input[name="search"]').autocomplete({
         source: function (request, response) {
@@ -158,7 +162,7 @@ $(function () {
         });
     });
 
-    //event cantidad
+    // event cant
     $('#tblProducts tbody')
         .on('click', 'a[rel="remove"]', function () {
             var tr = tblProducts.cell($(this).closest('td,li')).index();
@@ -167,7 +171,7 @@ $(function () {
                 vents.list();
             });
         })
-        .on('change', 'input[name = "cant"]', function () {
+        .on('change', 'input[name="cant"]', function () {
             console.clear();
             var cant = parseInt($(this).val());
             var tr = tblProducts.cell($(this).closest('td,li')).index(); //hayar posición
@@ -180,7 +184,8 @@ $(function () {
     $('.btnClearSearch').on('click', function () {
         $('input[name="search"]').val('').focus();
     });
-    //event submit
+
+    // event submit
     $('form').on('submit', function (e) {
         e.preventDefault();
 
@@ -195,7 +200,7 @@ $(function () {
         parameters.append('action', $('input[name="action"]').val());
         parameters.append('vents', JSON.stringify(vents.items));
         submit_with_ajax(window.location.pathname, 'Notificación', '¿Estas seguro de realizar la siguiente acción?', parameters, function () {
-            location.href = '/erp/dashboard/';
+            location.href = '/erp/sale/list/';
         });
     });
 
