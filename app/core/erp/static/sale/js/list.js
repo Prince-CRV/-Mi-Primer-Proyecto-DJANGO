@@ -84,7 +84,7 @@ $(function () {
             var data = tblSale.row(tr.row).data();
 
             $('#tblDet').DataTable({
-                //responsive: true,
+                responsive: false,
                 scrollX: true,
                 autoWidth: false,
                 destroy: true,
