@@ -11,13 +11,13 @@ function format(d) {
     html += '</thead>';
     html += '<tbody>';
     $.each(d.det, function (key, value) {
-        html+='<tr>'
-        html+='<td>'+value.prod.name+'</td>'
-        html+='<td>'+value.prod.cat.name+'</td>'
-        html+='<td>'+value.price+'</td>'
-        html+='<td>'+value.cant+'</td>'
-        html+='<td>'+value.subtotal+'</td>'
-        html+='</tr>';
+        html += '<tr>'
+        html += '<td>' + value.prod.name + '</td>'
+        html += '<td>' + value.prod.cat.name + '</td>'
+        html += '<td>' + value.price + '</td>'
+        html += '<td>' + value.cant + '</td>'
+        html += '<td>' + value.subtotal + '</td>'
+        html += '</tr>';
     });
     html += '</tbody>';
     return html;
@@ -69,6 +69,7 @@ $(function () {
                     var buttons = '<a href="/erp/sale/delete/' + row.id + '/" class="btn btn-outline-danger btn-xs btn-flat"><i class="fa-solid fa-trash" style="color: #000000;"></i></a> ';
                     buttons += '<a href="/erp/sale/update/' + row.id + '/" class="btn btn-outline-warning btn-xs btn-flat"><i class="fas fa-edit" style="color: #000000;"></i></a> ';
                     buttons += '<a rel="details" class="btn btn-outline-success btn-xs btn-flat"><i class="fa-solid fa-search"></i></a> ';
+                    buttons += '<a href="/erp/sale/invoice/pdf/' + row.id + '/" target="_blank" class="btn btn-outline-info btn-xs btn-flat"><i class="fa-solid fa-file-pdf" style="color: #000000;"></i></a> ';
                     return buttons;
                 }
             },
@@ -134,11 +135,11 @@ $(function () {
             if (row.child.isShown()) {
                 // This row is already open - close it
                 row.child.hide();
-                tr.removeClass('show');
+                tr.removeClass("show");
             } else {
                 // Open this row
                 row.child(format(row.data())).show();
-                tr.addClass('show');
+                tr.addClass("show");
             }
         });
 });
