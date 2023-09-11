@@ -14,7 +14,7 @@ $(function () {
             dataSrc: ""
         },
         columns: [
-            {"data": "id"},
+            {"data": "position"},
             {"data": "first_name"},
             {"data": "last_name"},
             {"data": "username"},
