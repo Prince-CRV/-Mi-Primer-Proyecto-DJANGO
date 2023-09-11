@@ -10,12 +10,17 @@ from core.erp.models import Sale, Product, DetSale
 
 from random import randint
 
+
 class DashboardView(TemplateView):
     template_name = 'dashboard.html'
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        request.user.get_group_session()
+        return super().get(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         data = {}
@@ -48,7 +53,8 @@ class DashboardView(TemplateView):
         try:
             year = datetime.now().year
             for m in range(1, 12):
-                total = Sale.objects.filter(date_joined__year=year, date_joined__month=m).aggregate(r=Coalesce(Sum('total'), 0, output_field=FloatField())).get('r')
+                total = Sale.objects.filter(date_joined__year=year, date_joined__month=m).aggregate(
+                    r=Coalesce(Sum('total'), 0, output_field=FloatField())).get('r')
                 data.append(float(total))
         except:
             pass
@@ -60,7 +66,9 @@ class DashboardView(TemplateView):
         month = datetime.now().month
         try:
             for p in Product.objects.all():
-                total = DetSale.objects.filter(sale__date_joined__year=year, sale__date_joined__month=month, prod_id=p.id).aggregate(r=Coalesce(Sum('subtotal'), 0, output_field=FloatField())).get('r')
+                total = DetSale.objects.filter(sale__date_joined__year=year, sale__date_joined__month=month,
+                                               prod_id=p.id).aggregate(
+                    r=Coalesce(Sum('subtotal'), 0, output_field=FloatField())).get('r')
                 if total > 0:
                     data.append({
                         'name': p.name,

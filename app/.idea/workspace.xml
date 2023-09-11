@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4025c28c-a2ba-4663-aea4-15e28ea82e44" name="Changes" comment="updated">
-      <change afterPath="$PROJECT_DIR$/core/user/templates/user/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/user/static/user/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/static/category/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/category/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/static/client/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/client/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/static/product/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/product/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/views/category/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/category/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/views/client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/client/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/views/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/views/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/dashboard/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/user/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/user/static/user/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/static/user/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/user/templates/user/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/templates/user/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/user/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/templates/user/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/user/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/hzt/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hzt/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vtc/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vtc/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -57,23 +58,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/app/core/user/static/user",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/app/core/user/static/user&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ibisl\OneDrive\Escritorio\Webs\Estudio\proyecto_1\app\core\user\static\user" />
@@ -140,7 +141,8 @@
       <workItem from="1694002231531" duration="12605000" />
       <workItem from="1694080636388" duration="34578000" />
       <workItem from="1694157903704" duration="28907000" />
-      <workItem from="1694420800036" duration="10895000" />
+      <workItem from="1694420800036" duration="18702000" />
+      <workItem from="1694441795598" duration="1981000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -286,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694431456081</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updated">
+      <option name="closed" value="true" />
+      <created>1694433642967</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1694433642967</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
