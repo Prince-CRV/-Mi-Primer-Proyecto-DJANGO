@@ -37,7 +37,7 @@ $(function () {
                 orderable: false,
                 render: function (data, type, row) {
                     var buttons = '<a href="/user/update/' + row.id + '/" class="btn btn-outline-warning btn-xs btn-flat"><i class="fa-solid fa-edit" style="color: #000000;"></i></a> ';
-                    buttons += '<a href="/erp/delete/' + row.id + '/" type="button" class="btn btn-outline-danger btn-xs btn-flat"><i class="fa-solid fa-trash" style="color: #000000;"></i></a>';
+                    buttons += '<a href="/user/delete/' + row.id + '/" type="button" class="btn btn-outline-danger btn-xs btn-flat"><i class="fa-solid fa-trash" style="color: #000000;"></i></a>';
                     return buttons;
                 }
             },
