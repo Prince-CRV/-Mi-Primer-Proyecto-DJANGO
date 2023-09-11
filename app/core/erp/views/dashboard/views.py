@@ -8,6 +8,7 @@ from datetime import datetime
 
 from core.erp.models import Sale, Product, DetSale
 
+from random import randint
 
 class DashboardView(TemplateView):
     template_name = 'dashboard.html'
@@ -33,6 +34,9 @@ class DashboardView(TemplateView):
                     'colorByPoint': 'true',
                     'data': self.get_graph_sales_products_year_month(),
                 }
+            elif action == 'get_graph_online':
+                data = {'y': randint(1, 100)}
+                # print(data)
             else:
                 data['error'] = 'Ha ocurrido un error'
         except Exception as e:
