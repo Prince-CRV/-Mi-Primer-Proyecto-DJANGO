@@ -140,3 +140,13 @@ MEDIA_URL = '/media/'
 AUTH_USER_MODEL = 'user.User'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
+# Email settings
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = '587'
+
+EMAIL_HOST_USER = 'princec6twitch@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'kzel dxxh oayu kwna'
