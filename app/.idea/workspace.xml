@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4025c28c-a2ba-4663-aea4-15e28ea82e44" name="Changes" comment="updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/templates/login/resetpwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login/resetpwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/static/sale/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/sale/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/static/sale/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/sale/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/templates/sale/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/sale/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/views/sale/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/sale/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/app/templates",
+    "last_opened_file_path": "C:/Users/ibisl/OneDrive/Escritorio/Webs/Estudio/proyecto_1/app/core/login/templates/login",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +71,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ibisl\OneDrive\Escritorio\Webs\Estudio\proyecto_1\app\core\login\templates\login" />
       <recent name="C:\Users\ibisl\OneDrive\Escritorio\Webs\Estudio\proyecto_1\app\templates" />
       <recent name="C:\Users\ibisl\OneDrive\Escritorio\Webs\Estudio\proyecto_1\app\core\user\static\user" />
     </key>
@@ -160,7 +167,7 @@
       <workItem from="1694157903704" duration="28907000" />
       <workItem from="1694420800036" duration="18702000" />
       <workItem from="1694441795598" duration="12553000" />
-      <workItem from="1694509967962" duration="12836000" />
+      <workItem from="1694509967962" duration="34760000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -370,7 +377,31 @@
       <option name="project" value="LOCAL" />
       <updated>1694527499225</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="updated">
+      <option name="closed" value="true" />
+      <created>1694531866878</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1694531866878</updated>
+    </task>
+    <task id="LOCAL-00028" summary="updated">
+      <option name="closed" value="true" />
+      <created>1694535022258</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1694535022258</updated>
+    </task>
+    <task id="LOCAL-00029" summary="updated">
+      <option name="closed" value="true" />
+      <created>1694538334430</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1694538334430</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

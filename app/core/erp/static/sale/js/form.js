@@ -1,4 +1,5 @@
 var tblProducts;
+var tblSearchProducts;
 var vents = {
     items: {
         cli: '',
@@ -147,38 +148,86 @@ $(function () {
     })
         .val(0.12);
 
-    // search products
+    // search clients
+    $('select[name="cli"]').select2({
+        theme: "bootstrap4",
+        language: 'es',
+        allowClear: true,
+        ajax: {
+            delay: 250,
+            type: 'POST',
+            url: window.location.pathname,
+            data: function (params) {
+                var queryParameters = {
+                    term: params.term,
+                    action: 'search_clients'
+                }
+                return queryParameters;
+            },
+            processResults: function (data) {
+                return {
+                    results: data
+                };
+            },
+        },
+        placeholder: 'Ingrese una descripción',
+        minimumInputLength: 1,
+    });
 
-    // $('input[name="search"]').autocomplete({
-    //     source: function (request, response) {
-    //         $.ajax({
-    //             url: window.location.pathname,
-    //             type: 'POST',
-    //             data: {
-    //                 'action': 'search_products',
-    //                 'term': request.term
-    //             },
-    //             dataType: 'json',
-    //         }).done(function (data) {
-    //             response(data);
-    //         }).fail(function (jqXHR, textStatus, errorThrown) {
-    //             //alert(textStatus + ': ' + errorThrown);
-    //         }).always(function (data) {
-    //
-    //         });
-    //     },
-    //     delay: 500,
-    //     minLength: 1,
-    //     select: function (event, ui) {
-    //         event.preventDefault(); // se usa para detener el evento en este caso la busqueda
-    //         console.clear();
-    //         ui.item.cant = 1;
-    //         ui.item.subtotal = 0.00;
-    //         console.log(vents.items);
-    //         vents.add(ui.item);
-    //         $(this).val('');
-    //     }
-    // });
+    $('.btnAddClient').on('click', function () {
+        $('#myModalClient').modal('show');
+    });
+
+    $('#myModalClient').on('hidden.bs.modal', function (e) {
+        $('#frmClient').trigger('reset');
+    });
+
+    $('#frmClient').on('submit', function (e) {
+        e.preventDefault();
+        var parameters = new FormData(this);
+        parameters.append('action', 'create_client');
+        submit_with_ajax(window.location.pathname, 'Notificación',
+            '¿Estas seguro de crear este cliente?', parameters, function (response) {
+                //console.log(response);
+                var newOption = new Option(response.full_name, response.id, false, true);
+                $('select[name="cli"]').append(newOption).trigger('change');
+                $('#myModalClient').modal('hide');
+            });
+    });
+
+
+// search products
+
+    $('input[name="search"]').autocomplete({
+        source: function (request, response) {
+            $.ajax({
+                url: window.location.pathname,
+                type: 'POST',
+                data: {
+                    'action': 'search_products',
+                    'term': request.term
+                },
+                dataType: 'json',
+            }).done(function (data) {
+                response(data);
+            }).fail(function (jqXHR, textStatus, errorThrown) {
+                //alert(textStatus + ': ' + errorThrown);
+            }).always(function (data) {
+
+            });
+        },
+        delay: 500,
+        minLength: 1,
+        select: function (event, ui) {
+            event.preventDefault(); // se usa para detener el evento en este caso la busqueda
+            console.clear();
+            ui.item.cant = 1;
+            ui.item.subtotal = 0.00;
+            console.log(vents.items);
+            vents.add(ui.item);
+            $(this).val('');
+        }
+    });
 
     $('.btnRemoveAll').on('click', function () {
         if (vents.items.products.length === 0) return false;
@@ -186,11 +235,11 @@ $(function () {
             vents.items.products = [];
             vents.list();
         }, function () {
-            
+
         });
     });
 
-    // event cant
+// event cant
     $('#tblProducts tbody')
         .on('click', 'a[rel="remove"]', function () {
             var tr = tblProducts.cell($(this).closest('td,li')).index();
@@ -215,8 +264,75 @@ $(function () {
         $('input[name="search"]').val('').focus();
     });
 
-    // event submit
-    $('form').on('submit', function (e) {
+    $('.btnSearchProducts').on('click', function () {
+        tblSearchProducts = $('#tblSearchProducts').DataTable({
+            //responsive: true,
+            //scrollX: true,
+            autoWidth: false,
+            destroy: true,
+            deferRender: true,
+            ajax: {
+                url: window.location.pathname,
+                type: 'POST',
+                data: {
+                    'action': 'search_products',
+                    'term': $('input[name="search"]').val(),
+                },
+                dataSrc: ""
+            },
+            columns: [
+                {"data": "name"},
+                {"data": "cat.name"},
+                {"data": "image"},
+                {"data": "pvp"},
+                {"data": "id"},
+            ],
+            columnDefs: [
+                {
+                    targets: [-3],
+                    class: 'text-center',
+                    orderable: false,
+                    render: function (data, type, row) {
+                        return '<img src="' + data + '" class="img-fluid d-block mx-auto" style="width: 20px; height: 20px;">';
+                    }
+                },
+                {
+                    targets: [-2],
+                    class: 'text-center',
+                    orderable: false,
+                    render: function (data, type, row) {
+                        return '$' + parseFloat(data).toFixed(2);
+                    }
+                },
+                {
+                    targets: [-1],
+                    class: 'text-center',
+                    orderable: false,
+                    render: function (data, type, row) {
+                        var buttons = '<a rel="add" class="btn btn-outline-success btn-xs btn-flat"><i class="fa-solid fa-plus" style="color: #000000;"></i></a> ';
+                        return buttons;
+                    }
+                },
+            ],
+            initComplete: function (settings, json) {
+
+            }
+        });
+        $('#myModalSearchProducts').modal('show');
+    });
+
+    $('#tblSearchProducts tbody')
+        .on('click', 'a[rel="add"]', function () {
+            var tr = tblSearchProducts.cell($(this).closest('td,li')).index(); //hayar posición
+            //var data = tblProducts.row(tr.row).node(); //hayar tr completo..... con .data() traigo el objeto
+            var product = tblSearchProducts.row(tr.row).data();
+            product.cant = 1;
+            product.subtotal = 0.00;
+            vents.add(product);
+        });
+
+// event submit
+    $('#frmSale').on('submit', function (e) {
         e.preventDefault();
 
         if (vents.items.products.length === 0) {
@@ -239,38 +355,41 @@ $(function () {
         });
     });
 
-    //vents.list();
+//vents.list();
 
-    $('select[name="search"]').select2({
-        theme: "bootstrap4",
-        language: 'es',
-        allowClear: true,
-        ajax: {
-            delay: 250,
-            type: 'POST',
-            url: window.location.pathname,
-            data: function (params) {
-                var queryParameters = {
-                    term: params.term,
-                    action: 'search_products'
-                }
-                return queryParameters;
-            },
-            processResults: function (data) {
-                return {
-                    results: data
-                };
-            },
-        },
-        placeholder: 'Ingrese una descripción',
-        minimumInputLength: 1,
-        templateResult: formatRepo,
-    }).on('select2:select', function (e) {
-        var data = e.params.data;
-        data.cant = 1;
-        data.subtotal = 0.00;
-        console.log(vents.items);
-        vents.add(data);
-        $(this).val('').trigger('change.select2');
-    });
+    // $('select[name="search"]').select2({
+    //     theme: "bootstrap4",
+    //     language: 'es',
+    //     allowClear: true,
+    //     ajax: {
+    //         delay: 250,
+    //         type: 'POST',
+    //         url: window.location.pathname,
+    //         data: function (params) {
+    //             var queryParameters = {
+    //                 term: params.term,
+    //                 action: 'search_products'
+    //             }
+    //             return queryParameters;
+    //         },
+    //         processResults: function (data) {
+    //             return {
+    //                 results: data
+    //             };
+    //         },
+    //     },
+    //     placeholder: 'Ingrese una descripción',
+    //     minimumInputLength: 1,
+    //     templateResult: formatRepo,
+    // }).on('select2:select', function (e) {
+    //     var data = e.params.data;
+    //     data.cant = 1;
+    //     data.subtotal = 0.00;
+    //     vents.add(data);
+    //     $(this).val('').trigger('change.select2');
+    // });
+
+    // Esto se puso aqui para que funcione bien el editar y calcule bien los valores del iva. // sino tomaría el valor del iva de la base debe
+    // coger el que pusimos al inicializarlo.
+    vents.list();
 });

@@ -85,7 +85,7 @@ $(function () {
 
             $('#tblDet').DataTable({
                 responsive: false,
-                scrollX: true,
+                //scrollX: true,
                 autoWidth: false,
                 destroy: true,
                 deferRender: true,
