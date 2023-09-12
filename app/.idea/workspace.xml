@@ -5,42 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4025c28c-a2ba-4663-aea4-15e28ea82e44" name="Changes" comment="updated">
-      <change afterPath="$PROJECT_DIR$/core/login/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/templates/login/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/login/templates/login/resetpwd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/eps/logo-black.eps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/eps/logo-color.eps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/eps/logo-no-background.eps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/eps/logo-white.eps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/logo-color.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/pdf/logo-black.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/pdf/logo-color.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/pdf/logo-no-background.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/pdf/logo-white.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/png/logo-black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/png/logo-color.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/png/logo-no-background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/png/logo-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/logo-black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/logo-color.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/logo-no-background.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/logo-white.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/new-email-copy-1_2023-09-12T101141.043925/images/Beefree-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/new-email-copy-1_2023-09-12T101141.043925/images/facebook2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/new-email-copy-1_2023-09-12T101141.043925/images/illo_welcome_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/new-email-copy-1_2023-09-12T101141.043925/images/instagram2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/new-email-copy-1_2023-09-12T101141.043925/images/logo-color.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/new-email-copy-1_2023-09-12T101141.043925/images/pinterest2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/new-email-copy-1_2023-09-12T101141.043925/images/twitter2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/new-email-copy-1_2023-09-12T101141.043925/new-email-copy-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/send_email.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/views/tests/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/tests/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/login/templates/login/resetpwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/login/templates/login/resetpwd.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +160,7 @@
       <workItem from="1694157903704" duration="28907000" />
       <workItem from="1694420800036" duration="18702000" />
       <workItem from="1694441795598" duration="12553000" />
-      <workItem from="1694509967962" duration="11437000" />
+      <workItem from="1694509967962" duration="12836000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -388,7 +354,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694458207797</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="updated">
+      <option name="closed" value="true" />
+      <created>1694527439040</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1694527439040</updated>
+    </task>
+    <task id="LOCAL-00026" summary="updated">
+      <option name="closed" value="true" />
+      <created>1694527499225</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1694527499225</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,6 +421,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/app$tests.coverage" NAME="tests Coverage Results" MODIFIED="1694526891425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app$tests.coverage" NAME="tests Coverage Results" MODIFIED="1694527550093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
