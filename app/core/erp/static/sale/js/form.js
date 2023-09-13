@@ -100,6 +100,10 @@ function formatRepo(repo) {
         return repo.text;
     }
 
+    if (!Number.isInteger(repo.id)) {
+        return repo.text;
+    }
+
     var option = $(
         '<div class="wrapper container">' +
         '<div class="row">' +
@@ -198,36 +202,36 @@ $(function () {
 
 // search products
 
-    $('input[name="search"]').autocomplete({
-        source: function (request, response) {
-            $.ajax({
-                url: window.location.pathname,
-                type: 'POST',
-                data: {
-                    'action': 'search_products',
-                    'term': request.term
-                },
-                dataType: 'json',
-            }).done(function (data) {
-                response(data);
-            }).fail(function (jqXHR, textStatus, errorThrown) {
-                //alert(textStatus + ': ' + errorThrown);
-            }).always(function (data) {
-
-            });
-        },
-        delay: 500,
-        minLength: 1,
-        select: function (event, ui) {
-            event.preventDefault(); // se usa para detener el evento en este caso la busqueda
-            console.clear();
-            ui.item.cant = 1;
-            ui.item.subtotal = 0.00;
-            console.log(vents.items);
-            vents.add(ui.item);
-            $(this).val('');
-        }
-    });
+    // $('input[name="search"]').autocomplete({
+    //     source: function (request, response) {
+    //         $.ajax({
+    //             url: window.location.pathname,
+    //             type: 'POST',
+    //             data: {
+    //                 'action': 'search_products',
+    //                 'term': request.term
+    //             },
+    //             dataType: 'json',
+    //         }).done(function (data) {
+    //             response(data);
+    //         }).fail(function (jqXHR, textStatus, errorThrown) {
+    //             //alert(textStatus + ': ' + errorThrown);
+    //         }).always(function (data) {
+    //
+    //         });
+    //     },
+    //     delay: 500,
+    //     minLength: 1,
+    //     select: function (event, ui) {
+    //         event.preventDefault(); // se usa para detener el evento en este caso la busqueda
+    //         console.clear();
+    //         ui.item.cant = 1;
+    //         ui.item.subtotal = 0.00;
+    //         console.log(vents.items);
+    //         vents.add(ui.item);
+    //         $(this).val('');
+    //     }
+    // });
 
     $('.btnRemoveAll').on('click', function () {
         if (vents.items.products.length === 0) return false;
@@ -276,7 +280,7 @@ $(function () {
                 type: 'POST',
                 data: {
                     'action': 'search_products',
-                    'term': $('input[name="search"]').val(),
+                    'term': $('select[name="search"]').val(),
                 },
                 dataSrc: ""
             },
@@ -357,37 +361,40 @@ $(function () {
 
 //vents.list();
 
-    // $('select[name="search"]').select2({
-    //     theme: "bootstrap4",
-    //     language: 'es',
-    //     allowClear: true,
-    //     ajax: {
-    //         delay: 250,
-    //         type: 'POST',
-    //         url: window.location.pathname,
-    //         data: function (params) {
-    //             var queryParameters = {
-    //                 term: params.term,
-    //                 action: 'search_products'
-    //             }
-    //             return queryParameters;
-    //         },
-    //         processResults: function (data) {
-    //             return {
-    //                 results: data
-    //             };
-    //         },
-    //     },
-    //     placeholder: 'Ingrese una descripción',
-    //     minimumInputLength: 1,
-    //     templateResult: formatRepo,
-    // }).on('select2:select', function (e) {
-    //     var data = e.params.data;
-    //     data.cant = 1;
-    //     data.subtotal = 0.00;
-    //     vents.add(data);
-    //     $(this).val('').trigger('change.select2');
-    // });
+    $('select[name="search"]').select2({
+        theme: "bootstrap4",
+        language: 'es',
+        allowClear: true,
+        ajax: {
+            delay: 250,
+            type: 'POST',
+            url: window.location.pathname,
+            data: function (params) {
+                var queryParameters = {
+                    term: params.term,
+                    action: 'search_autocomplete'
+                }
+                return queryParameters;
+            },
+            processResults: function (data) {
+                return {
+                    results: data
+                };
+            },
+        },
+        placeholder: 'Ingrese una descripción',
+        minimumInputLength: 1,
+        templateResult: formatRepo,
+    }).on('select2:select', function (e) {
+        var data = e.params.data;
+        if (!Number.isInteger(data.id)) {
+            return false
+        }
+        data.cant = 1;
+        data.subtotal = 0.00;
+        vents.add(data);
+        $(this).val('').trigger('change.select2');
+    });
 
     // Esto se puso aqui para que funcione bien el editar y calcule bien los valores del iva. // sino tomaría el valor del iva de la base debe
     // coger el que pusimos al inicializarlo.
