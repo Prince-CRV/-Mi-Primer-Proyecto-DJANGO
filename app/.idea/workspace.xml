@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4025c28c-a2ba-4663-aea4-15e28ea82e44" name="Changes" comment="updated">
+      <change afterPath="$PROJECT_DIR$/core/erp/migrations/0008_product_stock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/static/sale/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/sale/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/templates/sale/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/sale/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/erp/views/sale/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/views/sale/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/static/product/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/static/product/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/erp/templates/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/core/erp/templates/product/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +167,7 @@
       <workItem from="1694441795598" duration="12553000" />
       <workItem from="1694509967962" duration="35532000" />
       <workItem from="1694594414421" duration="382000" />
-      <workItem from="1694594875910" duration="2026000" />
+      <workItem from="1694594875910" duration="2694000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -407,7 +409,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694553045378</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="updated">
+      <option name="closed" value="true" />
+      <created>1694597857032</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1694597857032</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
