@@ -12,7 +12,7 @@ from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import CreateView, ListView, DeleteView, UpdateView, View
-from xhtml2pdf import pisa
+from weasyprint import CSS, HTML
 
 from core.erp.forms import SaleForm, ClientForm
 from core.erp.mixins import ValidatePermissionRequiredMixin
@@ -281,42 +281,18 @@ class SaleDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Delete
 
 class SaleInvoicePdfView(View):
 
-    def link_callback(self, uri, rel):
-        """
-        Convert HTML URIs to absolute system paths so xhtml2pdf can access those
-        resources
-        """
-        # use short variable names
-        sUrl = settings.STATIC_URL  # Typically /static/
-        sRoot = settings.STATIC_ROOT  # Typically /home/userX/project_static/
-        mUrl = settings.MEDIA_URL  # Typically /static/media/
-        mRoot = settings.MEDIA_ROOT  # Typically /home/userX/project_static/media/
-
-        # convert URIs to absolute system paths
-        if uri.startswith(mUrl):
-            path = os.path.join(mRoot, uri.replace(mUrl, ""))
-        elif uri.startswith(sUrl):
-            path = os.path.join(sRoot, uri.replace(sUrl, ""))
-        else:
-            return uri  # handle absolute uri (ie: http://some.tld/foo.png)
-
-        # make sure that file exists
-        if not os.path.isfile(path):
-            raise Exception(
-                'media URI must start with %s or %s' % (sUrl, mUrl)
-            )
-        return path
-
     def get(self, request, *args, **kwargs):
-
-        template = get_template('sale/invoice.html')
-        context = {
-            'sale': Sale.objects.get(pk=self.kwargs['pk']),
-            'comp': {'name': 'PRINCESOFT S.A', 'ruc': '9999999999999', 'address': 'Las Galletas'},
-            'icon': '{}{}'.format(settings.MEDIA_URL, 'logo.png')
-        }
-        html = template.render(context)
-        response = HttpResponse(content_type='application/pdf')
-        # response['Content-Disposition'] = 'attachment; filename="report.pdf"'
-        pisa.CreatePDF(html, dest=response, link_callback=self.link_callback)
-        return response
+        try:
+            template = get_template('sale/invoice.html')
+            context = {
+                'sale': Sale.objects.get(pk=self.kwargs['pk']),
+                'comp': {'name': 'PRINCESOFT S.A', 'ruc': '9999999999999', 'address': 'Las Galletas'},
+                'icon': '{}{}'.format(settings.MEDIA_URL, 'logo.png')
+            }
+            html = template.render(context)
+            css_url = os.path.join(settings.BASE_DIR, 'static/lib/bootstrap-4.4.1-dist/css/bootstrap.min.css')
+            pdf = HTML(string=html, base_url=request.build_absolute_uri()).write_pdf(stylesheets=[CSS(css_url)])
+            return HttpResponse(pdf, content_type='application/pdf')
+        except:
+            pass
+        return HttpResponseRedirect(reverse_lazy('erp:sale_list'))
