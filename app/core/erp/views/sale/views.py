@@ -275,7 +275,7 @@ class SaleDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, Delete
         return context
 
 
-class SaleInvoicePdfView(View):
+class SaleInvoicePdfView(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         try:
