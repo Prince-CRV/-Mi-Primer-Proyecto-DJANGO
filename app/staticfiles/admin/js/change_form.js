@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/venv/lib/python3.10/site-packages/django/contrib/admin/static/admin/js/change_form.js

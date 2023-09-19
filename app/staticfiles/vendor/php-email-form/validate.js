@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/core/homepage/static/vendor/php-email-form/validate.js

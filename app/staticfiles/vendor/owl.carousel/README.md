@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/core/homepage/static/vendor/owl.carousel/README.md
