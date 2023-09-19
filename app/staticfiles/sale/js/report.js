@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/core/reports/static/sale/js/report.js

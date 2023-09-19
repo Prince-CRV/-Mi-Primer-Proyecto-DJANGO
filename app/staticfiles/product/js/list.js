@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/core/erp/static/product/js/list.js
