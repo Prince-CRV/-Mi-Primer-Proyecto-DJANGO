@@ -28,6 +28,12 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+CSRF_TRUSTED_ORIGINS = ['princesoft.es']
+
 # Application definition
 
 INSTALLED_APPS = [
