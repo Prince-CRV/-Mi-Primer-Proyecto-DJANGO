@@ -2,7 +2,7 @@
 
 NAME="proyecto_1"
 DJANGODIR=$(dirname $(cd `dirname $0` && pwd))
-SOCKFILE=/tmp/gunicorn-apolo.sock
+SOCKFILE=/tmp/gunicorn-proyecto1.sock
 LOGDIR=${DJANGODIR}/logs/gunicorn.log
 USER=prince
 GROUP=prince
