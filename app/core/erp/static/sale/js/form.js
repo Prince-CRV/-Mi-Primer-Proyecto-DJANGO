@@ -178,6 +178,9 @@ $(function () {
             delay: 250,
             type: 'POST',
             url: window.location.pathname,
+            headers: {
+                'X-CSRFToken': csrftoken
+            },
             data: function (params) {
                 var queryParameters = {
                     term: params.term,
@@ -300,7 +303,10 @@ $(function () {
                     'ids': JSON.stringify(vents.get_ids()),
                     'term': $('select[name="search"]').val(),
                 },
-                dataSrc: ""
+                dataSrc: "",
+                headers: {
+                    'X-CSRFToken': csrftoken
+                }
             },
             columns: [
                 {"data": "full_name"},
@@ -394,6 +400,9 @@ $(function () {
         ajax: {
             delay: 250,
             type: 'POST',
+            headers: {
+                'X-CSRFToken': csrftoken
+            },
             url: window.location.pathname,
             data: function (params) {
                 var queryParameters = {

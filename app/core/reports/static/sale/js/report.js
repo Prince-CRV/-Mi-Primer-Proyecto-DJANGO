@@ -23,7 +23,10 @@ function generate_report() {
             url: window.location.pathname,
             type: 'POST',
             data: parameters,
-            dataSrc: ""
+            dataSrc: "",
+            headers: {
+                'X-CSRFToken': csrftoken
+            }
         },
         order: false,
         paging: false,
@@ -71,7 +74,7 @@ function generate_report() {
                             alignment: 'center'
                         }
                     };
-                    doc.content[1].table.widths = ['20%','20%','15%','15%','15%','15%'];
+                    doc.content[1].table.widths = ['20%', '20%', '15%', '15%', '15%', '15%'];
                     doc.content[1].margin = [0, 35, 0, 0];
                     doc.content[1].layout = {};
                     doc['footer'] = (function (page, pages) {

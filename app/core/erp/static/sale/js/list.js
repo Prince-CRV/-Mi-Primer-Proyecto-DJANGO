@@ -96,6 +96,9 @@ $(function () {
                 ajax: {
                     url: window.location.pathname,
                     type: 'POST',
+                    headers: {
+                        'X-CSRFToken': csrftoken
+                    },
                     data: {
                         'action': 'search_details_prod',
                         'id': data.id
