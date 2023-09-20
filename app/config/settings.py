@@ -32,7 +32,7 @@ SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CSRF_TRUSTED_ORIGINS = ['www.princesoft.es']
+CSRF_TRUSTED_ORIGINS = ['https://*.princesoft.es']
 
 # Application definition
 
