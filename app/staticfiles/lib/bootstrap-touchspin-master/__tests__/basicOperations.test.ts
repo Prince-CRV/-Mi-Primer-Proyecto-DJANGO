@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/static/lib/bootstrap-touchspin-master/__tests__/basicOperations.test.ts

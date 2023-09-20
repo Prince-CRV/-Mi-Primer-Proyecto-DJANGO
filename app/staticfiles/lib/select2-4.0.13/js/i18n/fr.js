@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/static/lib/select2-4.0.13/js/i18n/fr.js

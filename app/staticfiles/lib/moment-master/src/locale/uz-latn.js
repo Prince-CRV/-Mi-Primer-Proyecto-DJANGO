@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/static/lib/moment-master/src/locale/uz-latn.js

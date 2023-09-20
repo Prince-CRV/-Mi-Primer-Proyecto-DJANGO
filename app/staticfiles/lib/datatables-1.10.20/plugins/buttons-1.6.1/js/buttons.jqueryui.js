@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/static/lib/datatables-1.10.20/plugins/buttons-1.6.1/js/buttons.jqueryui.js

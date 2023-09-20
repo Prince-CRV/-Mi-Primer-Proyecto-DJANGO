@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/static/lib/sweetalert2-9.10.0/sweetalert2.js

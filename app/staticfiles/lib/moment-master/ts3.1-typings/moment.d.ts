@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/static/lib/moment-master/ts3.1-typings/moment.d.ts

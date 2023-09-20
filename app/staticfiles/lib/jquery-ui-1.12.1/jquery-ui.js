@@ -1,0 +1,1 @@
+/home/prince/proyecto_1/app/static/lib/jquery-ui-1.12.1/jquery-ui.js
