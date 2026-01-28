@@ -6,15 +6,14 @@ services:
     buildCommand: |
       python -m pip install --upgrade pip
       pip install -r app/requirements.txt
-      # 1. Borramos la DB actual para evitar el conflicto de historial
+      # 1. Borramos la DB para limpiar el historial
       rm -f app/db.sqlite3
-      # 2. Borramos archivos de migración viejos (excepto __init__.py) para empezar limpio
-      find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
-      # 3. Creamos migraciones nuevas basadas en tus modelos actuales
+      # 2. Borramos SOLO tus migraciones (dentro de la carpeta app)
+      # Esto evita tocar los archivos internos de la librería 'django'
+      find app -path "*/migrations/*.py" -not -name "__init__.py" -delete
+      # 3. Regeneramos todo
       python app/manage.py makemigrations
-      # 4. Aplicamos las migraciones a la DB nueva
       python app/manage.py migrate
-      # 5. Recolectamos estáticos
       python app/manage.py collectstatic --noinput
     startCommand: "gunicorn --chdir app config.wsgi:application"
     envVars:
