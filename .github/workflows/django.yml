@@ -34,4 +34,33 @@ jobs:
     - name: Run Tests
       run: |
         python app/manage.py test
+   
+    # ... (mantén tus pasos anteriores de 'build' hasta los tests)
+
+    - name: Recolectar estáticos
+      run: |
+        export PYTHONPATH=$PYTHONPATH:$(pwd)/app
+        # Esto genera la carpeta 'staticfiles' en la raíz
+        python app/manage.py collectstatic --noinput
+
+    - name: Subir artefacto para Pages
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # Carpeta que Django generó con collectstatic
+        path: 'staticfiles/'
+
+  # Nuevo trabajo para el despliegue
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Desplegar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
