@@ -48,7 +48,13 @@ jobs:
       with:
         # Carpeta que Django generó con collectstatic
         path: 'staticfiles/'
-
+    - name: Generar Index estático
+      run: |
+        export PYTHONPATH=$PYTHONPATH:$(pwd)/app
+        # Iniciamos el servidor temporalmente y guardamos el HTML
+        python app/manage.py runserver & 
+        sleep 5
+        curl http://127.0.0.1:8000/ > staticfiles/index.html
   # Nuevo trabajo para el despliegue
   deploy:
     needs: build
