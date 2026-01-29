@@ -16,6 +16,8 @@ services:
       python app/manage.py makemigrations
       python app/manage.py migrate
       python app/manage.py collectstatic --noinput
+      # ... dentro de buildCommand
+      python app/manage.py shell -c "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(username='admin').exists() or User.objects.create_superuser('admin', 'ibislavaut@gmail.com', 'django123')"
     startCommand: "gunicorn --chdir app config.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
