@@ -127,10 +127,19 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Esta línea habilita la compresión y el almacenamiento eficiente
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# Esto le dice a WhiteNoise que si no encuentra un archivo (como el .map), no rompa la app
+# 1. Agrega esta línea para que no falle si falta un archivo .map
 WHITENOISE_MANIFEST_STRICT = False
+
+# 2. Asegúrate de que el almacenamiento sea el correcto
+# Si usas Django 4.2 o superior:
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
+# Si usas una versión de Django más antigua, usa esta línea en su lugar:
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
