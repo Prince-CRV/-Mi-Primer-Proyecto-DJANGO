@@ -129,6 +129,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Esta línea habilita la compresión y el almacenamiento eficiente
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Esto le dice a WhiteNoise que si no encuentra un archivo (como el .map), no rompa la app
+WHITENOISE_MANIFEST_STRICT = False
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
