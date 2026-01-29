@@ -134,7 +134,7 @@ WHITENOISE_MANIFEST_STRICT = False
 # Si usas Django 4.2 o superior:
 STORAGES = {
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
 
